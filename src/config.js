@@ -6,6 +6,7 @@ export const SPLASHDOWN_MS  = new Date(SPLASHDOWN_UTC).getTime();
 
 export const LAUNCH_LIBRARY_ID = '41699701-2ef4-4b0c-ac9d-6757820cde87';
 export const LAUNCH_LIBRARY_API = `https://ll.thespacedevs.com/2.3.0/launches/${LAUNCH_LIBRARY_ID}/`;
+export const LL_EVENTS_API = 'https://ll.thespacedevs.com/2.3.0/events/upcoming/?search=Artemis&ordering=date&limit=30';
 
 export const STREAMS = {
   commentary: { id: 'm3kR2KK8TEs', label: 'Commentary' },
