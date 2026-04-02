@@ -1,0 +1,1017 @@
+{
+  "title": "ARTEMIS II MISSION PRIORITIES & OBJECTIVES",
+  "source": "src/data/objectives.json",
+  "sections": [
+    {
+      "name": "Mission Priorities",
+      "items": [
+        {
+          "number": 1,
+          "text": "Crew: Demonstrate the ability of systems and teams to sustain the flight crew in the flight environment, and through their return to Earth.",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "text": "Systems: Demonstrate systems and operations essential to a crewed lunar campaign. This ranges from ground systems to hardware in space, and operations spanning from development to launch, flight, and recovery.",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "text": "Hardware and Data: Retrieve flight hardware and data, assessing performance for future missions.",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "text": "Emergency Operations: Demonstrate emergency system capabilities and validate associated operations to the extent practical, such as abort operations and rescue procedures, as needed.",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "text": "Data and Subsystems: Complete additional objectives to verify subsystems and validate data.",
+          "subItems": []
+        }
+      ]
+    },
+    {
+      "name": "Mission Objectives",
+      "items": [
+        {
+          "number": 1,
+          "text": "Validate Exploration Ground Systems crew rescue operations (on the day of launch and during post-splashdown recovery operations)",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "text": "Validate human-rated abort automation and operations through nominal flight",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "text": "Demonstrate modified booster separation motor operation",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "text": "Demonstrate Orion proximity operations using the Interim Cryogenic Propulsion Stage (ICPS) as a docking target",
+          "subItems": [
+            {
+              "letter": "a",
+              "text": "Demonstrate Orion handling qualities"
+            },
+            {
+              "letter": "b",
+              "text": "Collect data on the impact Orion’s thrusters have on the ICPS"
+            },
+            {
+              "letter": "c",
+              "text": "Take long-range bearing measurements to determine Orion’s position relative to the ICPS using Orion’s docking camera"
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "text": "Demonstrate and validate Orion and crew systems reconfiguration essential for Earth departure operations",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "text": "Validate Orion’s service module propulsion system upgrades in flight environment",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "text": "Validate Orion’s life support system and critical crew survival systems",
+          "subItems": [
+            {
+              "letter": "a",
+              "text": "Complete a checkout of Orion’s life support system, including metabolic loading stress test"
+            },
+            {
+              "letter": "b",
+              "text": "Perform meal preparation"
+            },
+            {
+              "letter": "c",
+              "text": "Perform waste disposal"
+            },
+            {
+              "letter": "d",
+              "text": "Monitor the atmosphere inside Orion’s crew module"
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "text": "Validate crew suit system performance, including suit donning/doffing in a flight environment",
+          "subItems": []
+        },
+        {
+          "number": 9,
+          "text": "Validate in-space stowage and logistics plans, including:",
+          "subItems": [
+            {
+              "letter": "a",
+              "text": "Managing trash"
+            },
+            {
+              "letter": "b",
+              "text": "Stowing equipment in flight"
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "text": "Demonstrate crew support system operations for extended duration space missions",
+          "subItems": [
+            {
+              "letter": "a",
+              "text": "Demonstrate crew cabin depressurization and repressurization"
+            },
+            {
+              "letter": "b",
+              "text": "Demonstrate crew ability to exercise and measure loads put on the spacecraft during exercise"
+            },
+            {
+              "letter": "c",
+              "text": "Assess the robustness of non-critical equipment such as laptops and handheld devices"
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "text": "Demonstrate Orion environmental, communication, propulsion, navigation systems and flight crew and cabin systems",
+          "subItems": []
+        },
+        {
+          "number": 12,
+          "text": "Demonstrate optical communications capability",
+          "subItems": []
+        },
+        {
+          "number": 13,
+          "text": "Demonstrate crew emergency procedures, including:",
+          "subItems": [
+            {
+              "letter": "a",
+              "text": "Radiation shelter"
+            },
+            {
+              "letter": "b",
+              "text": "Medical procedures"
+            },
+            {
+              "letter": "c",
+              "text": "Fire response"
+            },
+            {
+              "letter": "d",
+              "text": "Rapid crew suit donning"
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "text": "Accomplish Flight Test Objectives",
+          "subItems": []
+        },
+        {
+          "number": 15,
+          "text": "Accomplish Development Flight Test Objectives and Development Test Objectives",
+          "subItems": []
+        },
+        {
+          "number": 16,
+          "text": "Support payloads",
+          "subItems": [
+            {
+              "letter": "a",
+              "text": "ATENEA"
+            },
+            {
+              "letter": "b",
+              "text": "TACHELES"
+            },
+            {
+              "letter": "c",
+              "text": "Space Weather Cube Sat"
+            },
+            {
+              "letter": "d",
+              "text": "K-Rad Cube"
+            },
+            {
+              "letter": "e",
+              "text": "ARCHeR"
+            },
+            {
+              "letter": "f",
+              "text": "Immune Biomarkers"
+            },
+            {
+              "letter": "g",
+              "text": "Spaceflight Standard Measures"
+            },
+            {
+              "letter": "h",
+              "text": "AVATAR"
+            },
+            {
+              "letter": "i",
+              "text": "National Geographic Artemis II Mission Story"
+            },
+            {
+              "letter": "j",
+              "text": "DLR M-42 Extended"
+            },
+            {
+              "letter": "k",
+              "text": "Lunar Observation Campaign"
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "text": "Support imagery",
+          "subItems": [
+            {
+              "letter": "a",
+              "text": "Engineering imagery used to document and carry out engineering analysis of the integrated vehicle and ground system components and performance before, during, and after flight"
+            },
+            {
+              "letter": "b",
+              "text": "Utilization imagery in support of payloads based in the crew module"
+            },
+            {
+              "letter": "c",
+              "text": "Imagery required to support public outreach"
+            },
+            {
+              "letter": "d",
+              "text": "Medical imagery related to medical and private conferences"
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "text": "Demonstrate and validate Orion and crew systems reconfiguration essential for Earth return operations",
+          "subItems": []
+        },
+        {
+          "number": 19,
+          "text": "Demonstrate Orion heat shield performance during reentry from cislunar velocity",
+          "subItems": []
+        },
+        {
+          "number": 20,
+          "text": "Validate post-landing crew recovery operations through egress",
+          "subItems": []
+        },
+        {
+          "number": 21,
+          "text": "Retrieve the crew module",
+          "subItems": []
+        }
+      ]
+    },
+    {
+      "name": "Flight Test Objectives",
+      "items": [
+        {
+          "number": 1,
+          "text": "Demonstrate initial atmospheric entry interface targeting under operational conditions",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "text": "Demonstrate crew module (CM)/service module (SM) separation upon command under operational conditions",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "text": "Demonstrate guided entry to a predetermined landing point under operational conditions",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "text": "Demonstrate the sequence of forward bay cover jettison and drogue parachute deploy under operational conditions",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "text": "Demonstrate the sequence of drogue release and main parachute deployment under operational conditions",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "text": "Demonstrate the sequence of touchdown orientation, detection, and main parachute release and Crew Module Uprighting System (CMUS) initiation under operational conditions",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "text": "Demonstrate CMUS under operational conditions",
+          "subItems": []
+        },
+        {
+          "number": 8,
+          "text": "Obtain mid-field and far-field separation dynamics performance of the forward bay cover jettison event",
+          "subItems": []
+        },
+        {
+          "number": 9,
+          "text": "Demonstrate nominal end-of-mission recovery of the crew module",
+          "subItems": []
+        },
+        {
+          "number": 10,
+          "text": "Demonstrate establishment and maintenance SARSAT beacon signal from the crew module",
+          "subItems": []
+        },
+        {
+          "number": 11,
+          "text": "Demonstrate crew module system power down and safing for recovery",
+          "subItems": []
+        },
+        {
+          "number": 12,
+          "text": "Demonstrate nominal end-of-mission main parachute recovery and forward bay cover recovery",
+          "subItems": []
+        },
+        {
+          "number": 13,
+          "text": "Demonstrate establishment and maintenance of Search and Rescue Satellite-Aided Tracking (SARSAT) beacon signal from the crew-worn Advanced Next Generation Emergency Locator (ANGEL) beacon",
+          "subItems": []
+        },
+        {
+          "number": 14,
+          "text": "Demonstrate nominal end-of-mission recovery of the flight crew",
+          "subItems": []
+        },
+        {
+          "number": 15,
+          "text": "Determine aerodynamic environments during all phases of nominal launch and ascent",
+          "subItems": []
+        },
+        {
+          "number": 16,
+          "text": "Determine the static and dynamic aerodynamic environment of the vehicle during all phases of nominal entry/descent",
+          "subItems": []
+        },
+        {
+          "number": 17,
+          "text": "Determine passive vent effectiveness for all phases of flight",
+          "subItems": []
+        },
+        {
+          "number": 18,
+          "text": "Obtain data to permit ongoing assessment of heatshield and backshell aerothermodynamic environment during re-entry",
+          "subItems": []
+        },
+        {
+          "number": 19,
+          "text": "Obtain data to permit ongoing assessment of acreage and cavity-induced boundary layer transition on the heatshield and backshell",
+          "subItems": []
+        },
+        {
+          "number": 20,
+          "text": "Obtain data to permit ongoing assessment of reaction control system jet interaction aerothermodynamic environment during entry",
+          "subItems": []
+        },
+        {
+          "number": 21,
+          "text": "Obtain data to permit ongoing assessment of ascent aerothermodynamic environment",
+          "subItems": []
+        },
+        {
+          "number": 22,
+          "text": "Obtain data for assessment of in-space aerothermodynamic environments and plume impingement, including on the solar arrays",
+          "subItems": []
+        },
+        {
+          "number": 23,
+          "text": "Determine the vibroacoustics of the crew module",
+          "subItems": []
+        },
+        {
+          "number": 24,
+          "text": "Determine the internal and external acoustics of the crew module",
+          "subItems": []
+        },
+        {
+          "number": 25,
+          "text": "Obtain data to assess service module internal vibroacoustics",
+          "subItems": []
+        },
+        {
+          "number": 26,
+          "text": "Obtain data to assess service module Internal and external acoustics",
+          "subItems": []
+        },
+        {
+          "number": 27,
+          "text": "Obtain data to assess launch abort system internal and external acoustics",
+          "subItems": []
+        },
+        {
+          "number": 28,
+          "text": "Obtain crew module acoustic environment data in audible frequency range during all phases of nominal launch and re-entry",
+          "subItems": []
+        },
+        {
+          "number": 29,
+          "text": "Determine the low-frequency vibration of the crew module",
+          "subItems": []
+        },
+        {
+          "number": 30,
+          "text": "Determine the low-frequency vibration of the service module",
+          "subItems": []
+        },
+        {
+          "number": 31,
+          "text": "Obtain data to assess the low-frequency environment of the launch abort system",
+          "subItems": []
+        },
+        {
+          "number": 32,
+          "text": "Obtain pre-launch sway, vibration data at the crew seat interface",
+          "subItems": []
+        },
+        {
+          "number": 33,
+          "text": "Obtain shock transmission and response on the crew module",
+          "subItems": []
+        },
+        {
+          "number": 34,
+          "text": "Obtain shock transmission and response on the service module",
+          "subItems": []
+        },
+        {
+          "number": 35,
+          "text": "Determine external and internal thermal environments during all mission phases",
+          "subItems": []
+        },
+        {
+          "number": 36,
+          "text": "Determine the post-landing temperatures of the crew module surfaces through both primary and secondary egress paths",
+          "subItems": []
+        },
+        {
+          "number": 37,
+          "text": "Obtain data to assess launch abort system hatch environments",
+          "subItems": []
+        },
+        {
+          "number": 38,
+          "text": "Measure launch abort system tower motion to drive launch abort system/Space Launch System loads environments",
+          "subItems": []
+        },
+        {
+          "number": 39,
+          "text": "Determine transient acceleration loads on crew",
+          "subItems": []
+        },
+        {
+          "number": 40,
+          "text": "Obtain near-field separation dynamics data of the forward bay cover jettison event",
+          "subItems": []
+        },
+        {
+          "number": 41,
+          "text": "Assess crew kinematic response to dynamic flight events",
+          "subItems": []
+        },
+        {
+          "number": 42,
+          "text": "Determine crew module heatshield structural performance during ascent and on-orbit operations",
+          "subItems": []
+        },
+        {
+          "number": 43,
+          "text": "Determine crew module heatshield structural performance during entry",
+          "subItems": []
+        },
+        {
+          "number": 44,
+          "text": "Determine and derive load sharing and structural vehicle dynamics in all six, integrated SM longerons",
+          "subItems": []
+        },
+        {
+          "number": 45,
+          "text": "Determine launch abort system motor adapter truss assembly structural performance during liftoff and ascent",
+          "subItems": []
+        },
+        {
+          "number": 46,
+          "text": "Determine crew module forward bay cover preload structural performance during all mission phases",
+          "subItems": []
+        },
+        {
+          "number": 47,
+          "text": "Demonstrate service module/spacecraft adapter fairing jettison during ascent under compression loading",
+          "subItems": []
+        },
+        {
+          "number": 48,
+          "text": "Demonstrate launch abort system separation during nominal ascent",
+          "subItems": []
+        },
+        {
+          "number": 49,
+          "text": "Demonstrate nominal side hatch egress operations after landing",
+          "subItems": []
+        },
+        {
+          "number": 50,
+          "text": "Demonstrate nominal side hatch closure operations pre-launch",
+          "subItems": []
+        },
+        {
+          "number": 51,
+          "text": "Determine the effect of varying trajectories on TPS performance",
+          "subItems": []
+        },
+        {
+          "number": 52,
+          "text": "Obtain data to assess the performance of Avcoat block seams on heatshield TPS performance",
+          "subItems": []
+        },
+        {
+          "number": 53,
+          "text": "Obtain data to assess the performance of Avcoat downstream of compression pads",
+          "subItems": []
+        },
+        {
+          "number": 54,
+          "text": "Obtain data to validate the performance of backshell thermal protection system (TPS) penetrations",
+          "subItems": []
+        },
+        {
+          "number": 55,
+          "text": "Obtain data to validate TPS design changes",
+          "subItems": []
+        },
+        {
+          "number": 56,
+          "text": "Obtain data to support TPS anomaly investigation",
+          "subItems": []
+        },
+        {
+          "number": 57,
+          "text": "Determine active thermal control system performance",
+          "subItems": []
+        },
+        {
+          "number": 58,
+          "text": "Determine the performance of electrical power generation function of solar arrays; demonstrate and determine electrical power distribution system with new small cell crew module batteries energy storage system performance for nominal flight conditions during all applicable mission phases",
+          "subItems": []
+        },
+        {
+          "number": 59,
+          "text": "Obtain data on ground support equipment loading, ground conditioning, and thermal management of gaseous pressurants and liquid hypergolic propellants",
+          "subItems": []
+        },
+        {
+          "number": 60,
+          "text": "Demonstrate crew module propulsion system post landing processing of toxic and/or high-pressure elements",
+          "subItems": []
+        },
+        {
+          "number": 61,
+          "text": "Determine service module propulsion pressurization control assembly performance in relevant cases",
+          "subItems": []
+        },
+        {
+          "number": 62,
+          "text": "Determine service module propulsion propellant isolation assembly performance in relevant cases",
+          "subItems": []
+        },
+        {
+          "number": 63,
+          "text": "Determine crew module and service module propulsion mass gauging performance",
+          "subItems": []
+        },
+        {
+          "number": 64,
+          "text": "Demonstrate ability to reacquire GPS signal after entry ionization blackout",
+          "subItems": []
+        },
+        {
+          "number": 65,
+          "text": "Determine guidance performance",
+          "subItems": []
+        },
+        {
+          "number": 66,
+          "text": "Determine orbit targeting and guidance performance",
+          "subItems": []
+        },
+        {
+          "number": 67,
+          "text": "Demonstrate a main engine translation maneuver",
+          "subItems": []
+        },
+        {
+          "number": 68,
+          "text": "Determine main engine and thrust vector control performance",
+          "subItems": []
+        },
+        {
+          "number": 69,
+          "text": "Determine auxiliary engine performance",
+          "subItems": []
+        },
+        {
+          "number": 70,
+          "text": "Determine trajectory correction maneuver performance",
+          "subItems": []
+        },
+        {
+          "number": 71,
+          "text": "Determine service module attitude control performance for nominal and off-nominal thruster configurations including use of back-up reaction control system (RCS) string and simultaneous use of both RCS strings",
+          "subItems": []
+        },
+        {
+          "number": 72,
+          "text": "Determine mass properties estimation performance",
+          "subItems": []
+        },
+        {
+          "number": 73,
+          "text": "Determine the Orion inertial measurement unit rotational/ translational sensing performance",
+          "subItems": []
+        },
+        {
+          "number": 74,
+          "text": "Obtain data on water impact areas to support post-flight comparison with predictions for service module, launch abort system, forward bay cover, drogue parachutes, pilot parachutes, and service module/spacecraft adapter fairing panels",
+          "subItems": []
+        },
+        {
+          "number": 75,
+          "text": "Determine crew module reaction control system exo-atmospheric and atmospheric performance",
+          "subItems": []
+        },
+        {
+          "number": 76,
+          "text": "Determine performance of barometric altimeter",
+          "subItems": []
+        },
+        {
+          "number": 77,
+          "text": "Determine GPS performance",
+          "subItems": []
+        },
+        {
+          "number": 78,
+          "text": "Determine optical navigation performance",
+          "subItems": []
+        },
+        {
+          "number": 79,
+          "text": "Determine sun sensor navigation performance",
+          "subItems": []
+        },
+        {
+          "number": 80,
+          "text": "Determine star tracker navigated attitude performance",
+          "subItems": []
+        },
+        {
+          "number": 81,
+          "text": "Determine the navigation performance of the ground-based radiometric tracking system network (including onboard systems)",
+          "subItems": []
+        },
+        {
+          "number": 82,
+          "text": "Determine vehicle processing unit backup navigation performance",
+          "subItems": []
+        },
+        {
+          "number": 83,
+          "text": "Determine integrated navigation system performance",
+          "subItems": []
+        },
+        {
+          "number": 84,
+          "text": "Determine the performance of the Orion separation from the launch vehicle",
+          "subItems": []
+        },
+        {
+          "number": 85,
+          "text": "Determine perigee and apogee raise and trans-lunar injection maneuver performance",
+          "subItems": []
+        },
+        {
+          "number": 86,
+          "text": "Demonstrate crew manual piloting",
+          "subItems": []
+        },
+        {
+          "number": 87,
+          "text": "Determine magnitude of environmental control and life support system (ECLSS)- and active thermal control system-generated trajectory perturbations from venting",
+          "subItems": []
+        },
+        {
+          "number": 88,
+          "text": "Demonstrate Orion vehicle performance during manual proximity operations with ICPS",
+          "subItems": []
+        },
+        {
+          "number": 89,
+          "text": "Demonstrate bearing measurement generation to a target vehicle using the docking camera",
+          "subItems": []
+        },
+        {
+          "number": 90,
+          "text": "Demonstrate docking camera performance with a docking target",
+          "subItems": []
+        },
+        {
+          "number": 91,
+          "text": "Determine the effects of wastewater venting on the docking camera bearing measurements",
+          "subItems": []
+        },
+        {
+          "number": 92,
+          "text": "Determine performance of the drogue parachute system under operational conditions.",
+          "subItems": []
+        },
+        {
+          "number": 93,
+          "text": "Determine the performance of the main parachute system under operational conditions",
+          "subItems": []
+        },
+        {
+          "number": 94,
+          "text": "Determine performance of the forward bay cover parachutes",
+          "subItems": []
+        },
+        {
+          "number": 95,
+          "text": "Determine the performance of the crew module uprighting system",
+          "subItems": []
+        },
+        {
+          "number": 96,
+          "text": "Verify that the Orion ECLSS controls trace contaminant levels remain within nominal levels and predicted limits",
+          "subItems": []
+        },
+        {
+          "number": 97,
+          "text": "Obtain data related to crew carbon dioxide exposure in a microgravity environment",
+          "subItems": []
+        },
+        {
+          "number": 98,
+          "text": "Verify ECLSS Performance",
+          "subItems": []
+        },
+        {
+          "number": 99,
+          "text": "Obtain exercise equipment session data during activation, checkout, and operations",
+          "subItems": []
+        },
+        {
+          "number": 100,
+          "text": "Determine the habitability provided by the Orion crew module",
+          "subItems": []
+        },
+        {
+          "number": 101,
+          "text": "Obtain ionizing radiation environment data within the Orion crew module",
+          "subItems": []
+        },
+        {
+          "number": 102,
+          "text": "Demonstrate upload capability of enriched medical procedures",
+          "subItems": []
+        },
+        {
+          "number": 103,
+          "text": "Demonstrate transmission capability and quality of two-way video",
+          "subItems": []
+        },
+        {
+          "number": 104,
+          "text": "Demonstrate transmission of a private voice system",
+          "subItems": []
+        },
+        {
+          "number": 105,
+          "text": "Demonstrate file uplink and downlink capability with the portable crew computing devices",
+          "subItems": []
+        },
+        {
+          "number": 106,
+          "text": "Determine avionics performance for conditions that are encountered during all applicable mission phases",
+          "subItems": []
+        },
+        {
+          "number": 107,
+          "text": "Determine displays and controls (D&C) hardware health during all mission phases",
+          "subItems": []
+        },
+        {
+          "number": 108,
+          "text": "Demonstrate link management with Human Space Flight Communications and Tracking Network (HSF CTN) and Collaborative Network Elements",
+          "subItems": []
+        },
+        {
+          "number": 109,
+          "text": "Determine induced environments during the ascent flight phases through ICPS disposal",
+          "subItems": []
+        },
+        {
+          "number": 110,
+          "text": "Determine performance of ascent critical events and separation events through ICPS/Orion separation",
+          "subItems": []
+        },
+        {
+          "number": 111,
+          "text": "Demonstrate communications, network, and tracking capabilities through ICPS/Orion separation",
+          "subItems": []
+        },
+        {
+          "number": 112,
+          "text": "Determine performance and injection accuracies for delivery of Orion to an injection point needed to achieve the proper orbit to enable a beyond Earth-orbit mission",
+          "subItems": []
+        },
+        {
+          "number": 113,
+          "text": "Determine control and control margin of vehicle through ICPS/Orion separation",
+          "subItems": []
+        },
+        {
+          "number": 114,
+          "text": "Determine safe disposal of jettisoned objects from integrated vehicle during the ascent flight phases through ICPS disposal",
+          "subItems": []
+        },
+        {
+          "number": 115,
+          "text": "Identify any potential liftoff, ascent, or separation debris capable of capture with available imagery through ICPS disposal",
+          "subItems": []
+        }
+      ]
+    },
+    {
+      "name": "Demonstration Flight Test Objectives",
+      "items": [
+        {
+          "number": 1,
+          "text": "Assess cabin pressure and thermal impacts on docking camera",
+          "subItems": []
+        },
+        {
+          "number": 2,
+          "text": "Assess stray light impacts on docking camera field of view",
+          "subItems": []
+        },
+        {
+          "number": 3,
+          "text": "Complete 24 - hour cabin acoustics assessment",
+          "subItems": []
+        },
+        {
+          "number": 4,
+          "text": "Complete toilet acoustics assessment",
+          "subItems": []
+        },
+        {
+          "number": 5,
+          "text": "Complete flywheel acoustics assessment",
+          "subItems": []
+        },
+        {
+          "number": 6,
+          "text": "Demonstrate cabin pressure control",
+          "subItems": []
+        },
+        {
+          "number": 7,
+          "text": "Demonstrate emergency communication",
+          "subItems": []
+        },
+        {
+          "number": 8,
+          "text": "Assess search, acquire, track (SAT) mode",
+          "subItems": []
+        },
+        {
+          "number": 9,
+          "text": "Assess exercise Loads",
+          "subItems": []
+        },
+        {
+          "number": 10,
+          "text": "Determine minimum ECLSS for exercise",
+          "subItems": []
+        },
+        {
+          "number": 11,
+          "text": "Assess manual attitude control handling qualities",
+          "subItems": []
+        },
+        {
+          "number": 12,
+          "text": "Assess full tail-to-sun deadbanding",
+          "subItems": []
+        },
+        {
+          "number": 13,
+          "text": "Demonstrate suit operations",
+          "subItems": []
+        },
+        {
+          "number": 14,
+          "text": "Complete off-nominal waste management system fit check",
+          "subItems": []
+        },
+        {
+          "number": 15,
+          "text": "Complete orthostatic intolerance garment fit check",
+          "subItems": []
+        },
+        {
+          "number": 16,
+          "text": "Obtain urine venting imagery",
+          "subItems": []
+        },
+        {
+          "number": 17,
+          "text": "Demonstrate crew compartment umbilicals",
+          "subItems": []
+        },
+        {
+          "number": 18,
+          "text": "Survey solar array wing vibration",
+          "subItems": []
+        },
+        {
+          "number": 19,
+          "text": "Obtain exercise imagery",
+          "subItems": []
+        },
+        {
+          "number": 20,
+          "text": "Characterize solar array wing cameras’ wifi strength",
+          "subItems": []
+        },
+        {
+          "number": 21,
+          "text": "Assess the solar array wings’ capability in full shadow",
+          "subItems": []
+        },
+        {
+          "number": 22,
+          "text": "Assess potable water dispenser performance",
+          "subItems": []
+        },
+        {
+          "number": 23,
+          "text": "Demonstrate crew active dosimeter Bluetooth interface with crew tablets",
+          "subItems": []
+        },
+        {
+          "number": 24,
+          "text": "Survey crew compartment windows",
+          "subItems": []
+        },
+        {
+          "number": 25,
+          "text": "Complete on-orbit controller mount questionnaire",
+          "subItems": []
+        },
+        {
+          "number": 26,
+          "text": "Assess flywheel hardware and software",
+          "subItems": []
+        },
+        {
+          "number": 27,
+          "text": "Assess hearing protection",
+          "subItems": []
+        },
+        {
+          "number": 28,
+          "text": "Assess display unit legibility during launch",
+          "subItems": []
+        },
+        {
+          "number": 29,
+          "text": "Assess ESA (European Space Agency) EveryWear application",
+          "subItems": []
+        },
+        {
+          "number": 30,
+          "text": "Demonstrate hybrid electronic radiation assessor (HERA) commanding",
+          "subItems": []
+        },
+        {
+          "number": 31,
+          "text": "Demonstrate ability to restrict access to crew tablets",
+          "subItems": []
+        }
+      ]
+    }
+  ]
+}

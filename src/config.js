@@ -12,6 +12,8 @@ export const STREAMS = {
   orion:      { id: '6RwfNBtepa4', label: 'Orion Live Views' },
 };
 
+export const AROW_TRACKER_URL = 'https://www.nasa.gov/missions/artemis-ii/arow/';
+
 export const RSS_URL = 'https://www.nasa.gov/blogs/artemis/feed/';
 
 export const POLL_INTERVAL_MS = 10 * 60 * 1000; // 10 minutes

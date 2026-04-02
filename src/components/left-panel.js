@@ -1,6 +1,7 @@
 import { mountTimeline } from './timeline.js';
 import { mountRSS }      from './rss.js';
 import { mountGlossary } from './glossary.js';
+import { mountObjectives } from './objectives.js';
 
 export function mountLeftPanel(el) {
   el.innerHTML = `
@@ -8,17 +9,20 @@ export function mountLeftPanel(el) {
       <button class="panel-tab active" data-tab="timeline">Timeline</button>
       <button class="panel-tab"        data-tab="updates">Updates</button>
       <button class="panel-tab"        data-tab="glossary">Glossary</button>
+      <button class="panel-tab"        data-tab="objectives">Objectives</button>
     </div>
     <div id="left-pane-wrap">
       <div class="panel-pane" id="left-pane-timeline"></div>
       <div class="panel-pane" id="left-pane-updates"  style="display:none"></div>
       <div class="panel-pane" id="left-pane-glossary" style="display:none"></div>
+      <div class="panel-pane" id="left-pane-objectives" style="display:none"></div>
     </div>
   `;
 
   mountTimeline(document.getElementById('left-pane-timeline'));
   mountRSS(document.getElementById('left-pane-updates'));
   mountGlossary(document.getElementById('left-pane-glossary'));
+  mountObjectives(document.getElementById('left-pane-objectives'));
 
   document.getElementById('left-tabs').addEventListener('click', e => {
     const btn = e.target.closest('.panel-tab');
@@ -29,5 +33,6 @@ export function mountLeftPanel(el) {
     document.getElementById('left-pane-timeline').style.display = tab === 'timeline' ? 'block' : 'none';
     document.getElementById('left-pane-updates').style.display  = tab === 'updates'  ? 'block' : 'none';
     document.getElementById('left-pane-glossary').style.display = tab === 'glossary' ? 'block' : 'none';
+    document.getElementById('left-pane-objectives').style.display = tab === 'objectives' ? 'block' : 'none';
   });
 }
