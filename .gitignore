@@ -1,0 +1,6 @@
+node_modules/
+dist/
+source/
+local/
+.github/agents
+.DS_Store

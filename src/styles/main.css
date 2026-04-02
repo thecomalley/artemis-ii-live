@@ -1,0 +1,841 @@
+/* =====================================================================
+   Artemis II Mission Tracker — Main Stylesheet
+   Dark space theme, vanilla CSS, no frameworks
+   ===================================================================== */
+
+/* ----- Custom Properties -------------------------------------------- */
+:root {
+  --color-bg:        #080c14;
+  --color-surface:   #0d1526;
+  --color-surface-2: #111d35;
+  --color-accent:    #0b3d91;
+  --color-border:    #1a2d50;
+  --color-text:      #d4dff5;
+  --color-text-dim:  #7a90b8;
+  --color-text-muted:#4a5e82;
+
+  --header-height: 56px;
+
+  /* Resizable layout */
+  --left-width: 340px;
+  --left-min:   180px;
+  --left-max:   600px;
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+}
+
+/* ----- Reset --------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- Base ---------------------------------------------------------- */
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ----- App Shell ----------------------------------------------------- */
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ----- Header -------------------------------------------------------- */
+#header {
+  flex-shrink: 0;
+  height: var(--header-height);
+  width: 100%;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-md);
+  gap: var(--spacing-lg);
+  z-index: 100;
+}
+
+/* ----- Two-Column Grid (timeline | splitter | main) ---------------- */
+#columns {
+  display: grid;
+  grid-template-columns: var(--left-width) 5px 1fr;
+  height: calc(100vh - var(--header-height));
+  overflow: hidden;
+}
+
+
+
+/* ----- Timeline Column (left) --------------------------------------- */
+#col-timeline {
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ----- Main Column (right) — flex column: video (aspect-ratio) | crew -- */
+#col-video {
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+#video-wrap {
+  flex-shrink: 0;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+#crew-below-video {
+  flex: 1;
+  min-height: 68px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#video-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ----- Splitters ---------------------------------------------------- */
+.splitter {
+  background: var(--color-border);
+  position: relative;
+  z-index: 20;
+}
+.splitter--v {
+  cursor: col-resize;
+}
+.splitter--h {
+  cursor: row-resize;
+}
+.splitter:hover,
+.splitter.dragging {
+  background: var(--color-accent);
+  transition: background 0.15s;
+}
+
+
+
+/* ----- Custom Scrollbar (Webkit) ------------------------------------ */
+#col-timeline::-webkit-scrollbar {
+  width: 4px;
+}
+
+#col-timeline::-webkit-scrollbar-track {
+  background: #080c14;
+}
+
+#col-timeline::-webkit-scrollbar-thumb {
+  background: #1a2a44;
+  border-radius: 2px;
+}
+
+#col-timeline::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ----- Milestone States ---------------------------------------------- */
+.milestone {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-left: 3px solid transparent;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  cursor: default;
+}
+
+.milestone.past {
+  opacity: 0.4;
+}
+
+.milestone.active {
+  opacity: 1;
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-surface-2);
+  color: #ffffff;
+}
+
+.milestone.upcoming {
+  opacity: 1;
+}
+
+/* ----- Flight Day Section Headers ------------------------------------ */
+.flight-day-header {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+/* ----- Skeleton Loader ---------------------------------------------- */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position:  400px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface)   0%,
+    var(--color-surface-2) 40%,
+    var(--color-surface)   80%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+/* ----- MET / UTC counters ------------------------------------------- */
+.met-counter,
+.utc-clock {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
+/* ----- Status Badge -------------------------------------------------- */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+/* ----- RSS Feed Items ----------------------------------------------- */
+.rss-item {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rss-item:last-child {
+  border-bottom: none;
+}
+
+.rss-item__title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.rss-item__date {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* ----- Header Inner Layout ------------------------------------------ */
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 16px;
+  height: 100%;
+  width: 100%;
+}
+
+.header-mission-name {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b7fa3;
+}
+
+.header-met {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.header-met.met-frozen {
+  color: #6b7fa3;
+}
+
+.header-utc {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #6b7fa3;
+}
+
+.header-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #888888;
+}
+
+.status-loaded .status-dot {
+  background: #4caf50;
+}
+
+.status-complete .status-dot {
+  background: #0b3d91;
+}
+
+#status-text {
+  font-size: 0.85rem;
+  color: #aabbcc;
+}
+
+/* ----- Timeline Component ------------------------------------------- */
+.timeline-header {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b7fa3;
+  padding: 12px 12px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  position: sticky;
+  top: 0;
+  background: var(--color-surface);
+  z-index: 1;
+}
+
+.timeline-disclaimer {
+  font-size: 0.6rem;
+  color: #445;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.flight-day-header {
+  border-top: 1px solid #1a2a44;
+}
+
+.milestone-met {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #4a6fa5;
+}
+
+.milestone-label {
+  font-size: 0.8rem;
+  color: #ffffff;
+  line-height: 1.3;
+  margin: 2px 0;
+}
+
+.milestone-local {
+  font-size: 0.65rem;
+  color: #6b7fa3;
+}
+
+.milestone-note {
+  font-size: 0.65rem;
+  color: #4a6fa5;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* ----- Section Labels ----------------------------------------------- */
+.col-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ----- Video Controls ----------------------------------------------- */
+.video-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: var(--color-surface);
+  flex-shrink: 0;
+}
+
+.video-stream-label {
+  font-size: 0.75rem;
+  color: #6b7fa3;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stream-toggle-btn {
+  background: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.stream-toggle-btn:hover {
+  background: #1a56c4;
+}
+
+/* ----- YouTube Player Container ------------------------------------- */
+#yt-player-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+#yt-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ----- Crew Panel (left panel card layout — Task 10) --------------- */
+.crew-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+}
+.crew-panel-header {
+  display: none;
+}
+.crew-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 8px;
+  border-right: 1px solid var(--color-border);
+  flex: 1;
+}
+.crew-card:hover {
+  background: var(--color-surface);
+}
+.crew-card-photo-wrap {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  position: relative;
+}
+.crew-card-photo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-accent);
+}
+.crew-card-initials {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crew-card-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+  white-space: nowrap;
+}
+.crew-card-role {
+  font-size: 0.62rem;
+  color: var(--color-text-dim);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ─── RSS Feed ─────────────────────────────────────── */
+.rss-header {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 12px 4px;
+  color: #6b7fa3;
+  position: sticky;
+  top: 0;
+  background: #080c14;
+  z-index: 1;
+}
+
+.rss-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #0d1526;
+  transition: background 0.2s;
+}
+
+.rss-item:hover {
+  background: #0d1526;
+}
+
+.rss-item a {
+  text-decoration: none;
+}
+
+.rss-title {
+  font-size: 0.8rem;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 3px;
+}
+
+.rss-meta {
+  font-size: 0.65rem;
+  color: #4a6fa5;
+}
+
+.rss-desc {
+  font-size: 0.7rem;
+  color: #6b7fa3;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.rss-error {
+  padding: 16px 12px;
+  font-size: 0.75rem;
+  color: #6b7fa3;
+  font-style: italic;
+}
+
+.rss-thumb {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+.rss-title-link {
+  text-decoration: none;
+}
+
+.rss-expand-btn {
+  display: inline-block;
+  margin-top: 4px;
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 0.68rem;
+  cursor: pointer;
+  padding: 0;
+  font-family: var(--font-sans);
+}
+
+.rss-expand-btn:hover {
+  text-decoration: underline;
+}
+
+.rss-item--featured {
+  border-bottom: 2px solid #1a2a4a;
+  padding-bottom: 14px;
+  margin-bottom: 2px;
+}
+
+.rss-item--featured .rss-thumb {
+  height: 160px;
+}
+
+.rss-item--featured .rss-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.rss-body {
+  font-size: 0.72rem;
+  color: #8da4c8;
+  line-height: 1.55;
+  margin-top: 6px;
+}
+
+.rss-body p {
+  margin: 0 0 0.5em;
+}
+
+.rss-body p:last-child {
+  margin-bottom: 0;
+}
+
+.rss-read-more {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.68rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.rss-read-more:hover {
+  text-decoration: underline;
+}
+
+/* Skeleton loader */
+@keyframes shimmer {
+  0%   { opacity: 0.3; }
+  50%  { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+.skeleton {
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.sk-title {
+  height: 14px;
+  background: #1a2a44;
+  border-radius: 3px;
+  margin-bottom: 6px;
+  width: 85%;
+}
+
+.sk-meta {
+  height: 10px;
+  background: #1a2a44;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  width: 40%;
+}
+
+.sk-desc {
+  height: 10px;
+  background: #1a2a44;
+  border-radius: 3px;
+  width: 95%;
+}
+
+/* ----- Mission Complete Overlay ------------------------------------- */
+#mission-complete-overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 12, 20, 0.92);
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 24px;
+}
+#mission-complete-overlay.visible {
+  display: flex;
+}
+.mc-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+.mc-subtitle {
+  font-size: 1rem;
+  color: #6b7fa3;
+  margin-bottom: 16px;
+}
+.mc-met {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: #0b3d91;
+  margin-bottom: 16px;
+}
+.mc-desc {
+  font-size: 0.85rem;
+  color: #6b7fa3;
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+/* ===================================================================
+   Panel Tabs (shared — right panel Task 9, left panel Task 10)
+   =================================================================== */
+.panel-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.panel-tab {
+  flex: 1;
+  padding: 8px 4px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--color-text-dim);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.15s, border-bottom-color 0.15s;
+}
+.panel-tab:hover {
+  color: var(--color-text);
+}
+.panel-tab.active {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+}
+.panel-pane {
+  overflow-y: auto;
+  height: 100%;
+}
+
+#left-pane-wrap {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===================================================================
+   Glossary
+   =================================================================== */
+.glossary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px 8px;
+  font-size: 0.7rem;
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  position: sticky;
+  top: 0;
+  background: var(--color-bg);
+  z-index: 1;
+}
+.glossary-search {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 3px;
+  width: 110px;
+  outline: none;
+}
+.glossary-search:focus {
+  border-color: var(--color-accent);
+}
+.glossary-table-wrap {
+  padding: 0 4px 12px;
+}
+.glossary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.glossary-term {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-accent);
+  padding: 6px 8px 6px 12px;
+  white-space: nowrap;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+  font-weight: 600;
+}
+.glossary-def {
+  font-size: 0.72rem;
+  color: var(--color-text-dim);
+  padding: 6px 12px 6px 4px;
+  line-height: 1.4;
+  border-bottom: 1px solid var(--color-border);
+}
+.glossary-table tr:hover .glossary-term,
+.glossary-table tr:hover .glossary-def {
+  background: var(--color-surface);
+}
+.glossary-empty {
+  padding: 16px 12px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ----- Timeline Progress Bar + Countdown ----------------------------- */
+.milestone-progress-wrap {
+  margin-top: 6px;
+  height: 3px;
+  background: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+  display: none;
+}
+.milestone-progress-bar {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 2px;
+  transition: width 1s linear;
+}
+.milestone-countdown {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-text-dim);
+  margin-top: 4px;
+  letter-spacing: 0.03em;
+  display: none;
+}
+.milestone.upcoming .milestone-countdown {
+  color: #c8a000;
+}
