@@ -3,6 +3,7 @@ import { T0_MS, SPLASHDOWN_MS, formatMET, isMissionComplete, LL_EVENTS_API, POLL
 export function mountHeader(el) {
   el.innerHTML = `
     <div class="header-inner">
+      <img src="/patch-logo.png" alt="Artemis II mission patch" class="header-patch" />
       <div class="header-mission-name">ARTEMIS II</div>
       <div class="header-met" id="met-display">MET +00/00:00:00</div>
       <div class="header-events-wrap">

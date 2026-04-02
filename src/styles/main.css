@@ -326,6 +326,13 @@ html, body {
   white-space: nowrap;
 }
 
+.header-patch {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .header-mission-name {
   font-size: 11px;
   font-weight: 700;
@@ -946,4 +953,96 @@ html, body {
 }
 .milestone.upcoming .milestone-countdown {
   color: #c8a000;
+}
+
+/* ===================================================================
+   Mobile — ≤ 768 px
+   =================================================================== */
+@media (max-width: 768px) {
+  /* Allow the page to scroll vertically */
+  html, body {
+    height: auto;
+    overflow: auto;
+  }
+
+  #app {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  /* ---- Header ---- */
+  .header-inner {
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  /* Hide upcoming-events strip — too wide for mobile */
+  .header-events-wrap {
+    display: none;
+  }
+
+  .header-met {
+    font-size: 1.05rem;
+  }
+
+  /* ---- Columns: vertical stack ---- */
+  #columns {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Video pane comes first, timeline pane comes second */
+  #col-video {
+    order: 1;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  #col-timeline {
+    order: 2;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    border-top: 2px solid var(--color-border);
+  }
+
+  /* Hide both drag splitters */
+  #splitter-v,
+  #splitter-h {
+    display: none;
+  }
+
+  /* ---- Crew bar: fixed height, horizontal scroll if needed ---- */
+  #crew-below-video {
+    flex: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .crew-card {
+    flex: none;
+    min-width: 82px;
+    max-width: 110px;
+  }
+
+  /* ---- Left panel panes: natural height, scroll inside ---- */
+  #left-pane-wrap {
+    height: auto;
+    overflow: visible;
+  }
+
+  .panel-pane {
+    height: auto;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  /* ---- Mission-complete overlay: fixed so it covers the viewport ---- */
+  #mission-complete-overlay {
+    position: fixed;
+  }
 }
