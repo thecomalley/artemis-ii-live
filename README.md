@@ -2,7 +2,7 @@
 
 Real-time mission dashboard for NASA's Artemis II crewed lunar mission.
 
-Live at: https://[your-username].github.io/artemis-ii/
+Live at: https://thecomalley.github.io/artemis-ii-live/
 
 ![Screenshot of Artemis II Mission Tracker](docs/image.png)
 
